@@ -5,6 +5,7 @@ using UnityEngine;
 public class Path : MonoBehaviour {
 
     public List<Vector3> waypoints = new List<Vector3>();
+    
 
     public int next = 0;
     public bool looped = true;
@@ -41,6 +42,7 @@ public class Path : MonoBehaviour {
     public Vector3 NextWaypoint()
     {
         return waypoints[next];
+        
     }
 
     public void AdvanceToNext()
