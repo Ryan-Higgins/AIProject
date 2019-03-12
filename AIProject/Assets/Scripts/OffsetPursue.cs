@@ -14,9 +14,8 @@ public class OffsetPursue : SteeringBehaviour
     public int formationPos;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        // There is a bug here!!
         offset = transform.position - leader.transform.position;
         offset.Normalize();
         offset.x *= (gap * formationPos);
