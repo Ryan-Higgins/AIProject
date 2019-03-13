@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="578fb6df-e1b6-46f9-96d1-473a232c84fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Twin Fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Twin Fire.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Ships/VSDI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Ships/VSDI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AIProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AIProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/OffsetPursue.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -64,6 +63,21 @@
                 <marker date="1552384182296" expanded="true" signature="372:597" ph="{...}" />
                 <marker date="1552384182296" expanded="true" signature="638:995" ph="{...}" />
                 <marker date="1552384182296" expanded="true" signature="1028:1132" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="13" column="73" lean-forward="true" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
+              <folding>
+                <marker date="1552484154696" expanded="false" signature="6:44" ph="..." />
+                <marker date="1552484154696" expanded="true" signature="88:295" ph="{...}" />
+                <marker date="1552484154696" expanded="true" signature="158:164" ph="{...}" />
+                <marker date="1552484154696" expanded="true" signature="219:293" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -95,6 +109,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Path.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Formation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pursue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -104,6 +119,7 @@
         <option value="$PROJECT_DIR$/../../GE2-2018-2019/GE2Examples/Assets/OffsetPursue.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Formation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OffsetPursue.cs" />
+        <option value="$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs" />
       </list>
     </option>
   </component>
@@ -124,15 +140,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,11 +201,12 @@
       <workItem from="1551959126876" duration="5293000" />
       <workItem from="1552383263451" duration="932000" />
       <workItem from="1552384356113" duration="742000" />
+      <workItem from="1552484139397" duration="348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7875000" />
+    <option name="totallyTimeSpent" value="8223000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -202,6 +219,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -324,6 +342,19 @@
             <marker date="1552384182296" expanded="true" signature="372:597" ph="{...}" />
             <marker date="1552384182296" expanded="true" signature="638:995" ph="{...}" />
             <marker date="1552384182296" expanded="true" signature="1028:1132" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/VolumetricLines/ExampleScenes/ExampleScripts/ShotBehavior.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="73" lean-forward="true" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
+          <folding>
+            <marker date="1552484154696" expanded="false" signature="6:44" ph="..." />
+            <marker date="1552484154696" expanded="true" signature="88:295" ph="{...}" />
+            <marker date="1552484154696" expanded="true" signature="158:164" ph="{...}" />
+            <marker date="1552484154696" expanded="true" signature="219:293" ph="{...}" />
           </folding>
         </state>
       </provider>
