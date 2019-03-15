@@ -26,18 +26,23 @@ public class Path : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //waypoints.Clear();
+        //int count = transform.childCount;
+        //for (int i = 0; i < count; i++)
+        //{
+        //    waypoints.Add(transform.GetChild(i).position);
+        //}
+	}
+	
+	// Update is called once per frame
+	void Update () {
         waypoints.Clear();
         int count = transform.childCount;
         for (int i = 0; i < count; i++)
         {
             waypoints.Add(transform.GetChild(i).position);
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
 
     public Vector3 NextWaypoint()
     {
