@@ -8,6 +8,7 @@ public class FollowPath : SteeringBehaviour {
     public Path path;
 
     Vector3 nextWaypoint;
+    public float distanceLimit = 3;
 
     public void OnDrawGizmos()
     {
@@ -25,8 +26,9 @@ public class FollowPath : SteeringBehaviour {
 
     public override Vector3 Calculate()
     {
-        nextWaypoint = path.NextWaypoint();
-        if (Vector3.Distance(transform.position, nextWaypoint) < 3)
+            nextWaypoint = path.NextWaypoint();
+
+        if (Vector3.Distance(transform.position, nextWaypoint) < distanceLimit)
         {
             path.AdvanceToNext();
         }
