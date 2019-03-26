@@ -14,8 +14,17 @@ public class TurretTarget : MonoBehaviour
 
     void Start()
     {
-        body = transform.Find("HeavyQuadTurboLaserBattery").transform.Find("Base").gameObject;
-        wheel = transform.Find("HeavyQuadTurboLaserBattery").transform.Find("Base").transform.Find("Wheel").gameObject;
+        if (gameObject.name == "HeavyQuadTurboLaserBattery")
+        {
+            body = transform.Find("HeavyQuadTurboLaserBattery").transform.Find("Base").gameObject;
+            wheel = transform.Find("HeavyQuadTurboLaserBattery").transform.Find("Base").transform.Find("Wheel")
+                .gameObject;
+        }
+        else
+        {
+            body = transform.Find("TwinTurboLaserTurret").gameObject;
+            wheel = transform.Find("TwinTurboLaserTurret").transform.Find("Wheel").gameObject; 
+        }
         
     }
 
