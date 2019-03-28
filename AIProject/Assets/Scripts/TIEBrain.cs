@@ -17,7 +17,7 @@ public class TIEBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(leadX.transform.position, destroyer.transform.position) <= 200)
+        if (Vector3.Distance(leadX.transform.position, destroyer.transform.position) <= 500)
         {
             gameObject.GetComponent<Boid>().maxSpeed = 40;
         }

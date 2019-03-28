@@ -6,6 +6,8 @@ public class CameraBrain : MonoBehaviour
 {
     public List<GameObject> cams;
     public GameObject frigate;
+    public GameObject leadFighter;
+    public GameObject destroyer;
         
     // Start is called before the first frame update
     void Start()
@@ -21,5 +23,18 @@ public class CameraBrain : MonoBehaviour
             cams[0].SetActive(false);
             cams[1].SetActive(true);
         }
+
+        if (Vector3.Distance(leadFighter.transform.position, destroyer.transform.position) <= 750)
+        {
+            cams[1].SetActive(false);
+            cams[2].SetActive(true);
+        }
+
+        if (Vector3.Distance(leadFighter.transform.position, destroyer.transform.position) <= 600)
+        {
+            cams[2].SetActive(false);
+            cams[3].SetActive(true);
+        }
+
     }
 }
