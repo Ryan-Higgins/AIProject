@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pursue : SteeringBehaviour
+public class DestroyerPursue : SteeringBehaviour
 {
     public Boid target;
 
@@ -26,7 +26,9 @@ public class Pursue : SteeringBehaviour
     {
         float dist = Vector3.Distance(target.transform.position, transform.position);
         float time = dist / boid.maxSpeed;
+        float beforeY = transform.position.y;
         targetPos = target.transform.position + (target.velocity * time);
+        targetPos.y = beforeY;
 
         return boid.SeekForce(targetPos);
     }

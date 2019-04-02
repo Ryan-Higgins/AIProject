@@ -16,6 +16,7 @@
           <e p="Arrive.cs" t="Include" />
           <e p="Boid.cs" t="Include" />
           <e p="CameraBrain.cs" t="Include" />
+          <e p="DestroyerPursue.cs" t="Include" />
           <e p="FollowPath.cs" t="Include" />
           <e p="Formation.cs" t="Include" />
           <e p="Harmonic.cs" t="Include" />
@@ -26,6 +27,7 @@
           <e p="SteeringBehaviour.cs" t="Include" />
           <e p="TIEBrain.cs" t="Include" />
           <e p="TurretTarget.cs" t="Include" />
+          <e p="XWingBrain.cs" t="Include" />
         </e>
         <e p="VolumetricLines" t="Include">
           <e p="ExampleScenes" t="Include">

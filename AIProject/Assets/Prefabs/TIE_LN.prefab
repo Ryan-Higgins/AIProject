@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 8619436035450142123}
   - component: {fileID: 778155398521303340}
   - component: {fileID: 2074865971226861384}
+  - component: {fileID: 975602027678661990}
   - component: {fileID: 8337214656404740126}
   m_Layer: 0
   m_Name: TIE_LN
@@ -603,6 +604,22 @@ MonoBehaviour:
   boid: {fileID: 0}
   path: {fileID: 0}
   distanceLimit: 3
+--- !u!114 &975602027678661990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577825001212135743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d6d4cdb0c8f264e86da8f132566910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &8337214656404740126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyer: {fileID: 0}
   leadX: {fileID: 0}
+  fighters: []
 --- !u!1001 &2415415368398969782
 PrefabInstance:
   m_ObjectHideFlags: 0

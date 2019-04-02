@@ -611,9 +611,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2656040609100067903}
   - component: {fileID: 6498486586794310680}
+  - component: {fileID: 2142235355588040330}
   m_Layer: 0
   m_Name: X-wing
-  m_TagString: Untagged
+  m_TagString: X-Wing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,6 +654,18 @@ MonoBehaviour:
   banking: 0.1
   maxSpeed: 40
   maxForce: 20
+--- !u!114 &2142235355588040330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656040609100067896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe4f1eebf386da4494f47870c5f0c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3121727677372302750
 GameObject:
   m_ObjectHideFlags: 0
