@@ -29,18 +29,22 @@ public class TIEBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(leadX.transform.position, destroyer.transform.position) <= 500)
+        print("My next: " + myPath.path.next);
+        if (Vector3.Distance(leadX.transform.position, destroyer.transform.position) <= 500 && myPath.enabled)
         {
             gameObject.GetComponent<Boid>().maxSpeed = 40;
         }
 
-        if (myPath.path.next == 5 && !notChosen)
+        if (Vector3.Distance(transform.position, myPath.path.waypoints[6]) <= 25 && !notChosen)
         {
+            gameObject.GetComponent<Boid>().maxSpeed = 80;
+            gameObject.GetComponent<Boid>().damping = 0.01f;
+            gameObject.GetComponent<Boid>().maxForce = 40;
             myPath.enabled = false;
             pur.enabled = true;
             pur.target = fighters[Random.Range(0, fighters.Count)].GetComponent<Boid>();
             notChosen = true;
-            this.transform.parent = null;
+            this.transform.parent = GameObject.Find("TIE Parent").gameObject.transform;
         }
     }
 }
