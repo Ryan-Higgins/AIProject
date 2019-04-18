@@ -5,10 +5,10 @@ using UnityEngine;
 public class TurretTarget : MonoBehaviour
 {
     public GameObject target;
-    private GameObject body;
-    private GameObject wheel;
-    private float turretAngle;
-    private float baseAngle;
+    public GameObject body;
+    public GameObject wheel;
+    public float turretAngle;
+    public float baseAngle;
     private float distance;
     private Vector3 sideCheck;
 
@@ -44,6 +44,12 @@ public class TurretTarget : MonoBehaviour
             {
                 wheel.transform.rotation = Quaternion.Euler(-turretAngle, baseAngle, 0.0f);
                 body.transform.rotation = Quaternion.Euler(0.0f, baseAngle, 0.0f);
+            }
+
+            if (turretAngle <= 0 && turretAngle >= -45)
+            {
+                wheel.transform.rotation = Quaternion.Euler(-turretAngle, baseAngle, 0.0f);
+                body.transform.rotation = Quaternion.Euler(0.0f, baseAngle, 180);
             }
         }
         /*else
