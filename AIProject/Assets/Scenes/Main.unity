@@ -884,6 +884,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4991541724047013984, guid: 2a5ba365256cc0744a50cc6cfa20faea,
+        type: 3}
+      propertyPath: m_Name
+      value: HeavyQuadTurboLaserBattery
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991541724047013984, guid: 2a5ba365256cc0744a50cc6cfa20faea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4993558052828132354, guid: 2a5ba365256cc0744a50cc6cfa20faea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -937,16 +947,6 @@ PrefabInstance:
     - target: {fileID: 4993558052828132354, guid: 2a5ba365256cc0744a50cc6cfa20faea,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991541724047013984, guid: 2a5ba365256cc0744a50cc6cfa20faea,
-        type: 3}
-      propertyPath: m_Name
-      value: HeavyQuadTurboLaserBattery
-      objectReference: {fileID: 0}
-    - target: {fileID: 4991541724047013984, guid: 2a5ba365256cc0744a50cc6cfa20faea,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8474114510843239403, guid: 2a5ba365256cc0744a50cc6cfa20faea,
@@ -1103,6 +1103,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 646367475605796814, guid: 0df2bdcd1dac23441918c24a8bae013a,
+        type: 3}
+      propertyPath: m_Name
+      value: TwinTurboLaserTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 646367475605796814, guid: 0df2bdcd1dac23441918c24a8bae013a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 645111050483908204, guid: 0df2bdcd1dac23441918c24a8bae013a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1157,16 +1167,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 646367475605796814, guid: 0df2bdcd1dac23441918c24a8bae013a,
-        type: 3}
-      propertyPath: m_Name
-      value: TwinTurboLaserTurret
-      objectReference: {fileID: 0}
-    - target: {fileID: 646367475605796814, guid: 0df2bdcd1dac23441918c24a8bae013a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 526413844, guid: 0df2bdcd1dac23441918c24a8bae013a, type: 3}
       propertyPath: target
@@ -2547,6 +2547,88 @@ Transform:
   m_Father: {fileID: 69409528}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &660564427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660564428}
+  - component: {fileID: 660564430}
+  - component: {fileID: 660564429}
+  m_Layer: 0
+  m_Name: Battle Cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &660564428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660564427}
+  m_LocalRotation: {x: 0.052694887, y: -0.9150787, z: 0.12721664, w: 0.3790383}
+  m_LocalPosition: {x: 278.6, y: 214.5, z: 424.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 787506965}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 15.829, y: -135, z: 0}
+--- !u!81 &660564429
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660564427}
+  m_Enabled: 1
+--- !u!20 &660564430
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660564427}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &671796983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,6 +3190,12 @@ Transform:
 --- !u!1 &787506964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1415442758324778, guid: 49a3ca716543d3040a5cbb305c8c18e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1018798035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &787506965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4182980389556374, guid: 49a3ca716543d3040a5cbb305c8c18e0,
     type: 3}
   m_PrefabInstance: {fileID: 1018798035}
   m_PrefabAsset: {fileID: 0}
@@ -5235,6 +5323,8 @@ MonoBehaviour:
   - {fileID: 870576690}
   - {fileID: 685192312}
   - {fileID: 1821325727}
+  - {fileID: 660564427}
+  tieLeader: {fileID: 1490988394}
   frigate: {fileID: 1858728579}
   leadFighter: {fileID: 714347062}
   destroyer: {fileID: 787506964}
@@ -6422,6 +6512,12 @@ Transform:
   m_Father: {fileID: 1635109371}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1490988394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8577825000681589633, guid: 49a3ca716543d3040a5cbb305c8c18e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1018798035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1500957327
 GameObject:
   m_ObjectHideFlags: 0

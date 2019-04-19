@@ -24,6 +24,7 @@ public class TIEBrain : MonoBehaviour
 
         myPath = GetComponent<FollowPath>();
         pur = GetComponent<Pursue>();
+        pur.target = fighters[Random.Range(0, fighters.Count)].GetComponent<Boid>();
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class TIEBrain : MonoBehaviour
             gameObject.GetComponent<Boid>().maxForce = 40;
             myPath.enabled = false;
             pur.enabled = true;
-            pur.target = fighters[Random.Range(0, fighters.Count)].GetComponent<Boid>();
+            
             notChosen = true;
             this.transform.parent = GameObject.Find("TIE Parent").gameObject.transform;
         }

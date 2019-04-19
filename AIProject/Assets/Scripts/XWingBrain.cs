@@ -20,6 +20,13 @@ public class XWingBrain : MonoBehaviour
         if (Vector3.Distance(transform.position, destroyer.transform.position) <= 850)
         {
             myAnim.SetBool("InRange", true);
+            StartCoroutine(Explode());
         }
+    }
+
+    IEnumerator Explode()
+    {
+        yield return new WaitForSeconds(Random.Range(180f,360f));
+        Destroy(gameObject);
     }
 }
