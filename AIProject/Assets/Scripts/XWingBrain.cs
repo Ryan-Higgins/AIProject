@@ -5,7 +5,7 @@ using UnityEngine;
 public class XWingBrain : MonoBehaviour
 {
     private Animator myAnim;
-
+    public GameObject explosion;
     private GameObject destroyer;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,10 @@ public class XWingBrain : MonoBehaviour
 
     IEnumerator Explode()
     {
-        yield return new WaitForSeconds(Random.Range(180f,360f));
+        yield return new WaitForSeconds(Random.Range(50f,55f));
+        GameObject bang = GameObject.Instantiate(explosion, gameObject.transform.position, explosion.transform.rotation);
+        bang.transform.SetParent(GameObject.Find("Explosions").transform);
         Destroy(gameObject);
+
     }
 }

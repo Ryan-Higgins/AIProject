@@ -7,10 +7,11 @@ public class DestroyerPursue : SteeringBehaviour
     public Boid target;
 
     Vector3 targetPos;
+    private float beforeY;
 
     void Start()
     {
-        
+        beforeY = transform.position.y;
     }
 
     public void OnDrawGizmos()
@@ -26,7 +27,7 @@ public class DestroyerPursue : SteeringBehaviour
     {
         float dist = Vector3.Distance(target.transform.position, transform.position);
         float time = dist / boid.maxSpeed;
-        float beforeY = transform.position.y;
+        
         targetPos = target.transform.position + (target.velocity * time);
         targetPos.y = beforeY;
 

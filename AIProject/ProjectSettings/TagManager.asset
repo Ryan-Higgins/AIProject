@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Star Destroyer
   - X-Wing
+  - Frig
+  - Laser
   layers:
   - Default
   - TransparentFX

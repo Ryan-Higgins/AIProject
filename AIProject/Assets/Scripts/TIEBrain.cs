@@ -13,6 +13,7 @@ public class TIEBrain : MonoBehaviour
     private Pursue pur;
     private FollowPath myPath;
     private bool notChosen = false;
+    public GameObject explosion;
     
     // Start is called before the first frame update
     void Start()
@@ -47,5 +48,13 @@ public class TIEBrain : MonoBehaviour
             notChosen = true;
             this.transform.parent = GameObject.Find("TIE Parent").gameObject.transform;
         }
+    }
+
+    IEnumerator Explode()
+    {
+        yield return new WaitForSeconds(Random.Range(50f, 70f));
+        GameObject bang = GameObject.Instantiate(explosion, gameObject.transform.position, explosion.transform.rotation);
+        bang.transform.SetParent(GameObject.Find("Explosions").transform);
+        Destroy(gameObject);
     }
 }

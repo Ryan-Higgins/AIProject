@@ -13,6 +13,7 @@ public class CameraBrain : MonoBehaviour
     private bool secondSwitch = false;
     private bool thirdSwitch = false;
     private bool fourthSwitch = false;
+    
         
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,44 @@ public class CameraBrain : MonoBehaviour
         {
             cams[3].SetActive(false);
             cams[4].SetActive(true);
-            fourthSwitch = true;
+            fourthSwitch = true;   
+            StartCoroutine(Warp());
         }
+    }
 
+    IEnumerator Warp()
+    {
+        yield return new WaitForSeconds(28);
+        cams[4].SetActive(false);
+        cams[5].SetActive(true);
+        yield return new WaitForSeconds(1);
+        destroyer.SetActive(false);
+        StartCoroutine(EnterWarp());
+    }
+
+    IEnumerator EnterWarp()
+    {
+        yield return new WaitForSeconds(0);
+        if (cams[5].GetComponent<Camera>().fieldOfView < 179)
+        {
+            cams[5].GetComponent<Camera>().fieldOfView++;
+            StartCoroutine(EnterWarp());
+        }
+        else
+        {
+            StartCoroutine(LeaveWarp());
+        }
+        
+    }
+    
+    IEnumerator LeaveWarp()
+    {
+       
+        yield return new WaitForSeconds(0);
+        if (cams[5].GetComponent<Camera>().fieldOfView >= 60)
+        {
+            cams[5].GetComponent<Camera>().fieldOfView--;
+            StartCoroutine(LeaveWarp());
+        }
     }
 }

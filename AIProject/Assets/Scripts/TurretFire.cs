@@ -10,6 +10,7 @@ public class TurretFire : MonoBehaviour
     private Animator myAnim;
     public Boid vsdi;
     private bool canFire;
+    public bool aiming = false;
     
     void Start()
     {
@@ -34,7 +35,7 @@ public class TurretFire : MonoBehaviour
 
     IEnumerator Fire()
     {
-        if (canFire)
+        if (canFire && aiming)
         {
             Vector3 targetPos = barrels[muzzle].transform.position + (vsdi.velocity * Time.deltaTime);
             myAnim.SetBool("Fire", true);

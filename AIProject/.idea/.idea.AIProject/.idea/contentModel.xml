@@ -5,8 +5,10 @@
     <e p="C:\Users\rhino\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_AIProject.-1819675324.00" t="ExcludeRecursive" />
     <e p="G:\Repositories\AIProject\AIProject" t="IncludeRecursive">
       <e p="AIProject.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Explosion.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Shaders" t="Include">
             <e p="EngineGlow.shader" t="Include" />
@@ -24,11 +26,33 @@
           <e p="Path.cs" t="Include" />
           <e p="Pursue.cs" t="Include" />
           <e p="Seek.cs" t="Include" />
+          <e p="Shot.cs" t="Include" />
           <e p="SteeringBehaviour.cs" t="Include" />
           <e p="TIEBrain.cs" t="Include" />
           <e p="TurretFire.cs" t="Include" />
           <e p="TurretTarget.cs" t="Include" />
           <e p="XWingBrain.cs" t="Include" />
+        </e>
+        <e p="Standard Assets" t="Include">
+          <e p="ParticleSystems" t="Include">
+            <e p="ParticleSystemsGuidelines.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="AfterburnerPhysicsForce.cs" t="Include" />
+              <e p="ExplosionFireAndDebris.cs" t="Include" />
+              <e p="ExplosionPhysicsForce.cs" t="Include" />
+              <e p="ExtinguishableParticleSystem.cs" t="Include" />
+              <e p="FireLight.cs" t="Include" />
+              <e p="Hose.cs" t="Include" />
+              <e p="ParticleSystemMultiplier.cs" t="Include" />
+              <e p="SmokeParticles.cs" t="Include" />
+              <e p="WaterHoseParticles.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="PriorityParticleAdd.shader" t="Include" />
+              <e p="PriorityParticleAddSoft.shader" t="Include" />
+              <e p="PriorityParticleAlpha.shader" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="VolumetricLines" t="Include">
           <e p="ExampleScenes" t="Include">

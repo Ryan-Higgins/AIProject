@@ -11,19 +11,32 @@ public class TurretTarget : MonoBehaviour
     public float baseAngle;
     private float distance;
     private Vector3 sideCheck;
+    public List<GameObject> fighters;
 
     void Start()
     {
+        foreach (GameObject x in GameObject.FindGameObjectsWithTag("X-Wing"))
+        {
+            fighters.Add(x);
+        }
+        
         if (gameObject.name == "HeavyQuadTurboLaserBattery")
         {
             body = transform.Find("HeavyQuadTurboLaserBattery").transform.Find("Base").gameObject;
             wheel = transform.Find("HeavyQuadTurboLaserBattery").transform.Find("Base").transform.Find("Wheel")
                 .gameObject;
+
+            target = fighters[Random.Range(0, fighters.Count)].gameObject;
         }
         else
         {
             body = transform.Find("TwinTurboLaserTurret").gameObject;
-            wheel = transform.Find("TwinTurboLaserTurret").transform.Find("Wheel").gameObject; 
+            wheel = transform.Find("TwinTurboLaserTurret").transform.Find("Wheel").gameObject;
+
+            if (target == null)
+            {
+                target = fighters[Random.Range(0, fighters.Count)].gameObject;
+            }
         }
         
     }
@@ -44,20 +57,19 @@ public class TurretTarget : MonoBehaviour
             {
                 wheel.transform.rotation = Quaternion.Euler(-turretAngle, baseAngle, 0.0f);
                 body.transform.rotation = Quaternion.Euler(0.0f, baseAngle, 0.0f);
+                gameObject.GetComponent<TurretFire>().aiming = true;
             }
 
             if (turretAngle <= 0 && turretAngle >= -45)
             {
                 wheel.transform.rotation = Quaternion.Euler(-turretAngle, baseAngle, 0.0f);
                 body.transform.rotation = Quaternion.Euler(0.0f, baseAngle, 180);
+                gameObject.GetComponent<TurretFire>().aiming = true;
             }
         }
-        /*else
+        else
         {
-            wheel.transform.rotation = Quaternion.Euler(turretAngle - 180, baseAngle, 0.0f);
-        }*/
-
-       
-        
+            target = fighters[Random.Range(0, fighters.Count)].gameObject;
+        }        
     }
 }

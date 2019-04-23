@@ -635,6 +635,8 @@ MonoBehaviour:
   destroyer: {fileID: 0}
   leadX: {fileID: 0}
   fighters: []
+  explosion: {fileID: 4696817936621311198, guid: 8fc6cbcc7ebc9aa48b1d06c25078d951,
+    type: 3}
 --- !u!1001 &2415415368398969782
 PrefabInstance:
   m_ObjectHideFlags: 0
