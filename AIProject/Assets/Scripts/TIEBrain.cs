@@ -14,6 +14,7 @@ public class TIEBrain : MonoBehaviour
     private FollowPath myPath;
     private bool notChosen = false;
     public GameObject explosion;
+    public bool canAttack;
     
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class TIEBrain : MonoBehaviour
             pur.enabled = true;
             
             notChosen = true;
+            canAttack = true;
             this.transform.parent = GameObject.Find("TIE Parent").gameObject.transform;
         }
     }

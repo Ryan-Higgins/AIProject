@@ -7,6 +7,8 @@ public class XWingBrain : MonoBehaviour
     private Animator myAnim;
     public GameObject explosion;
     private GameObject destroyer;
+
+    public bool attackPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class XWingBrain : MonoBehaviour
         if (Vector3.Distance(transform.position, destroyer.transform.position) <= 850)
         {
             myAnim.SetBool("InRange", true);
+            attackPosition = true;
             StartCoroutine(Explode());
         }
     }

@@ -19,13 +19,19 @@ public class Shot : MonoBehaviour
 
     void OnTriggerEnter(Collider shot)
     {
-        if (shot.CompareTag("Laser"))
+        if (shot.CompareTag("Laser") && gameObject.name == "Nebulon-B")
         {
             print("Boom");
             GameObject bang = GameObject.Instantiate(explosion, shot.transform.position, explosion.transform.rotation);
             bang.transform.SetParent(GameObject.Find("Explosions").transform);
+            Destroy(shot.gameObject);   
+        } else if (shot.CompareTag("Laser1") && gameObject.name == "VSDI")
+        {
+            GameObject bang = GameObject.Instantiate(explosion, shot.transform.position, explosion.transform.rotation);
+            bang.transform.SetParent(GameObject.Find("Explosions").transform);
             Destroy(shot.gameObject);
-            
         }
+        
+        
     }
 }

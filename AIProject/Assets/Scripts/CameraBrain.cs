@@ -9,6 +9,9 @@ public class CameraBrain : MonoBehaviour
     public GameObject frigate;
     public GameObject leadFighter;
     public GameObject destroyer;
+    public GameObject lasers;
+    public GameObject ties;
+    public List<GameObject> fleet;
     private bool firstSwitch = false;
     private bool secondSwitch = false;
     private bool thirdSwitch = false;
@@ -61,6 +64,8 @@ public class CameraBrain : MonoBehaviour
         cams[5].SetActive(true);
         yield return new WaitForSeconds(1);
         destroyer.SetActive(false);
+        lasers.SetActive(false);
+        ties.SetActive(false);
         StartCoroutine(EnterWarp());
     }
 
@@ -74,9 +79,15 @@ public class CameraBrain : MonoBehaviour
         }
         else
         {
-            StartCoroutine(LeaveWarp());
+            StartCoroutine(InWarp());
         }
         
+    }
+
+    IEnumerator InWarp()
+    {
+        yield return new WaitForSeconds(2);
+        StartCoroutine(LeaveWarp());
     }
     
     IEnumerator LeaveWarp()
@@ -88,5 +99,32 @@ public class CameraBrain : MonoBehaviour
             cams[5].GetComponent<Camera>().fieldOfView--;
             StartCoroutine(LeaveWarp());
         }
+
+        frigate.GetComponent<Boid>().maxSpeed = 0;
+        StartCoroutine(Fleet());
+    }
+
+    IEnumerator Fleet()
+    {
+        yield return new WaitForSeconds(3);
+        for (int i = 0; i < fleet.Count; i++)
+        {
+         fleet[i].SetActive(true);
+        }
+
+        StartCoroutine(GrowFleet());
+    }
+
+    IEnumerator GrowFleet()
+    {
+        yield return new WaitForSeconds(0f);
+        for (int i = 0; i < fleet.Count; i++)
+        {
+            if (fleet[i].transform.localScale.x < 1)
+            {
+                fleet[i].transform.localScale = new Vector3(fleet[i].transform.localScale.x + 0.4f,fleet[i].transform.localScale.y + 0.4f, fleet[i].transform.localScale.z + 0.4f);
+            }
+        }
+        StartCoroutine(GrowFleet());
     }
 }
