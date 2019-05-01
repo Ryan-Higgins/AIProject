@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraBrain : MonoBehaviour
 {
+    //Everything we need to keep track of in the scene
     public List<GameObject> cams;
     public GameObject tieLeader;
     public GameObject frigate;
@@ -16,38 +18,32 @@ public class CameraBrain : MonoBehaviour
     private bool secondSwitch = false;
     private bool thirdSwitch = false;
     private bool fourthSwitch = false;
-    
-        
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
+        //Checking distance of the Nebulon-B frigate to its second waypoint
         if (Vector3.Distance(frigate.transform.position, frigate.GetComponent<FollowPath>().path.waypoints[1]) <= 2 && !firstSwitch)
         {
             cams[0].SetActive(false);
             cams[1].SetActive(true);
+            //These switches keep the cameras from switching back and forth.
             firstSwitch = true;
         }
-
+        //Checking the distance of the Lead X-Wing to the VSDI
         if (Vector3.Distance(leadFighter.transform.position, destroyer.transform.position) <= 750 && !secondSwitch)
         {
             cams[1].SetActive(false);
             cams[2].SetActive(true);
             secondSwitch = true;
         }
-
+        //Same as above just with less distance
         if (Vector3.Distance(leadFighter.transform.position, destroyer.transform.position) <= 600 && !thirdSwitch)
         {
             cams[2].SetActive(false);
             cams[3].SetActive(true);
             thirdSwitch = true;
         }
-
+        //Checking the position of the First Tie fighter on the path. 
         if (Vector3.Distance(tieLeader.transform.position, tieLeader.GetComponent<FollowPath>().path.waypoints[6]) <= 25 && !fourthSwitch)
         {
             cams[3].SetActive(false);
@@ -59,6 +55,7 @@ public class CameraBrain : MonoBehaviour
 
     IEnumerator Warp()
     {
+        //Timer started for the battle to end.
         yield return new WaitForSeconds(28);
         cams[4].SetActive(false);
         cams[5].SetActive(true);
@@ -71,6 +68,7 @@ public class CameraBrain : MonoBehaviour
 
     IEnumerator EnterWarp()
     {
+        //Giving the illusion of warp through camera FOV
         yield return new WaitForSeconds(0);
         if (cams[5].GetComponent<Camera>().fieldOfView < 179)
         {
@@ -84,6 +82,7 @@ public class CameraBrain : MonoBehaviour
         
     }
 
+    //Delay on exit warp.
     IEnumerator InWarp()
     {
         yield return new WaitForSeconds(2);
@@ -92,7 +91,7 @@ public class CameraBrain : MonoBehaviour
     
     IEnumerator LeaveWarp()
     {
-       
+        //Returning FOV to normal
         yield return new WaitForSeconds(0);
         if (cams[5].GetComponent<Camera>().fieldOfView >= 60)
         {
@@ -106,6 +105,7 @@ public class CameraBrain : MonoBehaviour
 
     IEnumerator Fleet()
     {
+        //Setting the VSDIs to active
         yield return new WaitForSeconds(3);
         for (int i = 0; i < fleet.Count; i++)
         {
@@ -117,6 +117,7 @@ public class CameraBrain : MonoBehaviour
 
     IEnumerator GrowFleet()
     {
+        //Growing the VSDIs scale to give illusion of warping in
         yield return new WaitForSeconds(0f);
         for (int i = 0; i < fleet.Count; i++)
         {

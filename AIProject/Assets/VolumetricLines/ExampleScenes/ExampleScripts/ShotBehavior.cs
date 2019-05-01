@@ -4,6 +4,7 @@ using System.Collections;
 public class ShotBehavior : MonoBehaviour {
 public float speed;
 
+	//Basic laser script that just moves and destroys them after time.
 	// Use this for initialization
 	void Start ()
 	{

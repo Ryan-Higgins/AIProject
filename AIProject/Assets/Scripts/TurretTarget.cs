@@ -15,11 +15,13 @@ public class TurretTarget : MonoBehaviour
 
     void Start()
     {
+        //Getting every X-Wing
         foreach (GameObject x in GameObject.FindGameObjectsWithTag("X-Wing"))
         {
             fighters.Add(x);
         }
         
+        //Checking which turret this is and setting the relevant parts
         if (gameObject.name == "HeavyQuadTurboLaserBattery")
         {
             body = transform.Find("HeavyQuadTurboLaserBattery").transform.Find("Base").gameObject;
@@ -43,6 +45,7 @@ public class TurretTarget : MonoBehaviour
 
     void Update()
     {  
+        //Getting the relevant angles.
         sideCheck = target.transform.position - body.transform.position;
         
         turretAngle = Mathf.Atan2(sideCheck.y,sideCheck.z) * Mathf.Rad2Deg;
@@ -50,7 +53,7 @@ public class TurretTarget : MonoBehaviour
         
         print("My Distance: " + distance);
         //print(angle);
-
+        //Limiting where the turret can target. Changes target if out of range/view.
         if (baseAngle >= -45 && baseAngle <= 45)
         {
             if (turretAngle >= 0 && turretAngle <= 45)

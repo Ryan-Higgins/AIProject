@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class OffsetPursue : SteeringBehaviour
 {
+    //Tweaked version of offset pursue so ships fly more like X-Wings
     public Boid leader;
 
     Vector3 targetPos;

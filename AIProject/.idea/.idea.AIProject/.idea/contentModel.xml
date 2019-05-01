@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\rhino\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\rhino\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_AIProject.-1819675324.00" t="ExcludeRecursive" />
-    <e p="G:\Repositories\AIProject\AIProject" t="IncludeRecursive">
+    <e p="C:\Users\rhino\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_AIProject.-612746730.00" t="ExcludeRecursive" />
+    <e p="C:\Users\rhino\Documents\Repositeries\AIProject\AIProject" t="IncludeRecursive">
       <e p="AIProject.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Explosion.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Shaders" t="Include">
             <e p="EngineGlow.shader" t="Include" />
@@ -19,8 +18,8 @@
           <e p="Boid.cs" t="Include" />
           <e p="CameraBrain.cs" t="Include" />
           <e p="DestroyerPursue.cs" t="Include" />
+          <e p="Explosion.cs" t="Include" />
           <e p="FollowPath.cs" t="Include" />
-          <e p="Formation.cs" t="Include" />
           <e p="Harmonic.cs" t="Include" />
           <e p="OffsetPursue.cs" t="Include" />
           <e p="Path.cs" t="Include" />
@@ -29,9 +28,11 @@
           <e p="Shot.cs" t="Include" />
           <e p="SteeringBehaviour.cs" t="Include" />
           <e p="TIEBrain.cs" t="Include" />
+          <e p="TIEFire.cs" t="Include" />
           <e p="TurretFire.cs" t="Include" />
           <e p="TurretTarget.cs" t="Include" />
           <e p="XWingBrain.cs" t="Include" />
+          <e p="XWingFire.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="ParticleSystems" t="Include">
@@ -54,7 +55,6 @@
             </e>
           </e>
         </e>
-        <e p="TIEFire.cs" t="Include" />
         <e p="VolumetricLines" t="Include">
           <e p="ExampleScenes" t="Include">
             <e p="ExampleScripts" t="Include">
@@ -84,7 +84,6 @@
             <e p="Strip-AlphaBlended.shader" t="Include" />
           </e>
         </e>
-        <e p="XWingFire.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour
 {
+    //Script to keep track of behaviours on Game object and then apply the forces calculated to the object.
     List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
 
     public Vector3 force = Vector3.zero;

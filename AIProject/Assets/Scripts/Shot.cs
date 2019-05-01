@@ -19,6 +19,7 @@ public class Shot : MonoBehaviour
 
     void OnTriggerEnter(Collider shot)
     {
+        //Checking if the laser hits, if its an enemy laser and then spawns an explosion particle at the impact point.
         if (shot.CompareTag("Laser") && gameObject.name == "Nebulon-B")
         {
             print("Boom");

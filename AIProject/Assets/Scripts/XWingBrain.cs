@@ -12,6 +12,7 @@ public class XWingBrain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Getting the necessary parts
         myAnim = GetComponentInChildren<Animator>();
         destroyer = GameObject.Find("VSDI");
     }
@@ -19,6 +20,7 @@ public class XWingBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checking distance to VSDI to activate animation
         if (Vector3.Distance(transform.position, destroyer.transform.position) <= 850)
         {
             myAnim.SetBool("InRange", true);
@@ -29,10 +31,11 @@ public class XWingBrain : MonoBehaviour
 
     IEnumerator Explode()
     {
+        //Countdown till the ships explode. Will take place in the battle scene.
         yield return new WaitForSeconds(Random.Range(50f,55f));
         GameObject bang = GameObject.Instantiate(explosion, gameObject.transform.position, explosion.transform.rotation);
         bang.transform.SetParent(GameObject.Find("Explosions").transform);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
 
     }
 }

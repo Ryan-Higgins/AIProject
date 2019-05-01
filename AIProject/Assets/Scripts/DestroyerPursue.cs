@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyerPursue : SteeringBehaviour
 {
+    //Version of Pursue that locks the Y value so it doesn't rise or fall.
     public Boid target;
 
     Vector3 targetPos;
